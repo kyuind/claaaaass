@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Test</title>
+</head>
+<body>
+    <p id="demo"></p>  
+    <script>
+        document.getElementById("demo").innerHTML = 5 + 6 ;
+
+        let age = 30;
+        // let age = 25; // SyntaxError: Identifier 'age' has already been declared
+        if (true) {
+        let age = 20; // 다른 스코프(블록 내)에서는 재선언 가능
+        console.log(age); // 출력: 20
+        }
+        console.log(age); // 출력: 30
+
+        const sayHello = function(a) {
+        console.log("Hello!",a);
+        };
+        const greet = sayHello; // 함수를 다른 변수에 할당
+
+        greet()
+     
+        // function sayHello2(){
+        //         console.log("Hello!");
+        // }
+        sayHello(2)
+
+        const firstName = "Alice";
+        const lastName = "Johnson";
+        const fullName = firstName + " " + lastName;
+        console.log(fullName); // "Alice Johnson" 출력
+
+        console.log('1'+2)
+
+        let x = 5;
+        let y = ++x;
+        console.log(x); // 6 출력 (x의 값이 1 증가)
+        console.log(y); // 6 출력 (증가된 x의 값)
+
+   
+        // let fTemp = 122;
+        // let cTemp =(fTemp - 32 ) *5/9; 
+        
+        // console.log(`섭시는 ${cTemp}도 입니다`)
+
+        // let num1 = 456;
+        // let num2 = 111;
+
+        // num1 = num1 - (num1 % 100)
+        // num2 = num2 - (num2 % 100)
+
+        // console.log(num1, num2)
+
+        // let num = 12345;
+
+        // let numStr = num.toString();
+
+        // let one = Number(numStr[4])
+        // let two = Number(numStr[3])
+        // let three = Number(numStr[2])
+        // let four = Number(numStr[1])
+        // let five = Number(numStr[0])
+
+        // console.log(one+two+three+four+five)
+
+        // let input = Number(prompt('숫자를 입력해주세요', '숫자'));
+        // switch ( input % 2){
+        //     case 0: 
+        //         console.log("짝수")
+        //     case 1: 
+        //         console.log("홀수")
+
+        //     default:   
+        //         console.log("예외")
+        // }
+
+        // for (let i = 0 ; i < 10, i++) {
+        //     console.log(i);
+        // }
+
+           
+        const n = 5; // 별의 개수
+
+        for (let i = 1; i <= n; i++) {
+            let stars = "";
+            for (let j = 1; j <= i; j++) {
+             stars += "*";
+            }
+            console.log(stars);
+        }
+
+
+                function createItemTemplate(category) {
+        const items = [];
+
+        return function addItem(item) {
+            items.push({ category, item });
+            console.log(items);
+        };
+        }
+
+        const addFruit = createItemTemplate('Fruit');
+        addFruit('Apple'); // 출력: [{ category: 'Fruit', item: 'Apple' }]
+        addFruit('Banana'); // 출력: [{ category: 'Fruit', item: 'Apple' }, { category: 'Fruit', item: 'Banana' }]
+        
+        
+        const addVegetable = createItemTemplate('Vegetable');
+        addVegetable('Carrot'); // 출력: [{ category: 'Vegetable', item: 'Carrot' }]
+
+        
+        const filterEvenNumbers = numbers => numbers.filter(number => number %2 ==0);
+        const numbers = [1, 2, 3, 4, 5, 6];
+        const evenNumbers = filterEvenNumbers(numbers);
+        console.log(evenNumbers); // [2, 4, 6] 출력
+        console.log (numbers)
+
+  
+        const filterLongStrings = strings => strings.filter(string => string.length > 4);
+        const strings = ['apple', 'banana', 'cherry', 'date', 'fig'];
+        const longStrings = filterLongStrings(strings);
+        console.log(longStrings); // ['banana', 'cherry'] 출력
+
+
+        // const convertToUpperCase = strings => strings( up => up.touppercase(strings));
+        // const strings = ['apple', 'banana', 'cherry'];
+        // const upperCaseStrings = convertToUpperCase(strings);
+        // console.log(upperCaseStrings); // ['APPLE', 'BANANA', 'CHERRY'] 출력
+
+    </script>
+  
+</body>
+</html>
