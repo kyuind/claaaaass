@@ -1,0 +1,26 @@
+제목 View  < 전체 페이지 영역 Views, components < 둘다 component
+문서 전체 영역 영향 -> View // 문서 부분 영역 영향 -> component  단어 구분하는게 좋음 
+
+vue => route로 작동 
+(NVT통신, 컴퍼넌트)
+
+View파일에서 <style scoped> 사용하여 부분 적용 
+전체 작용시 assets 에서 따로 만들어 작성 
+
+<ptemplate>내에 <h1><p> 태크 사용시 큰 태그 만들어 줘야함 <div>
+<ptemplate> 내 자식태크 2개 불가능.
+함수 선언 function ( 사용 x )
+텍스트 바인딩 장고 문법 [[]] , 뷰 문법 {{}}
+
+<--------데이터 바인딩-------->
+
+templat <=> script 양방향 바인딩가능 
+Shift +ctrl + p  => Snippet (코드 조각 구성) => vue
+v-model 양방향 바인딩  ex[v-model="data"]  { templat <=>attribute }
+v-bind:value( : ) 속성 바인딩 (단반향 바인딩) ex[v-bind:속성 ="data"] , :속성="data"
+{{}} 텍스트 바인딩 ex[{{data}}]
+v-html  html 바인딩 ex[v-html="data"]
+
+listdata
+<tr :key="noodle.id" v-for="noodle in noodledata"> == 
+<tr :key="index" v-for="(item, index) in noodledata">

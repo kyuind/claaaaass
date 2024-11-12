@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href='http://www.naver.com'>이동</a>
+    <script>
+        // 링크 요소를 찾기
+        const link = document.querySelector('a');
+    
+        // 링크에 이벤트 리스너 추가
+        link.addEventListener('click', (event) => {
+            // 경고창 표시
+            alert('이동이 막혔습니다!');
+    
+            // 기본 이벤트(링크 이동) 막기
+            event.preventDefault();
+        });
+    </script>
+</body>
+</html>
