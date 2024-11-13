@@ -9,7 +9,7 @@
     <input tupe="text" v-model.number="num2"/> =
     <span>{{}}</span>
     <hr>
-    <br/>
+    <br/>npm
     <br/>
     <br/>
     <input type="text" v-model.number="num3"/> {{cal}}

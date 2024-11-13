@@ -24,3 +24,14 @@ v-html  html 바인딩 ex[v-html="data"]
 listdata
 <tr :key="noodle.id" v-for="noodle in noodledata"> == 
 <tr :key="index" v-for="(item, index) in noodledata">
+
+<keyView> 
+18 . stop
+12 . prevent
+11 . alert
+5 . keyup
+
+<v-if vs v-show>
+
+v-if는 DOM에 들어오지도 못함 
+v-show는 display:none; 상태로 들어옴

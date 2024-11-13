@@ -47,6 +47,42 @@ component: () => import(/* webpackChunkName: "htmlbinding" */ '../views/DataBind
         name: 'total',
         component: () => import(/* webpackChunkName: "totalbinding" */ '../views/DataBinding/CheckboxSelectRadioView.vue')
         },
+        {
+        path: '/click',
+        name: 'click',
+        component: () => import(/* webpackChunkName: "event" */ '../views/Event/ClickView.vue')
+        },
+        {
+          path: '/Change',
+          name: 'Change',
+          component: () => import(/* webpackChunkName: "Change" */ '../views/Event/ChangeView.vue')
+          },
+          {
+            path: '/key',
+            name: 'key',
+            component: () => import(/* webpackChunkName: "Change" */ '../views/Event/ChangeView.vue')
+            },
+            {
+              path: '/Render',
+              name: 'Render',
+              component: () => import(/* webpackChunkName: "Render" */ '../views/Extra/RenderView.vue')
+              },
+              {
+                path: '/show',
+                name: 'show',
+                component: () => import(/* webpackChunkName: "show" */ '../views/Extra/RenderShowView.vue')
+                },
+                {
+                  path: '/computed',
+                  name: 'computed',
+                  component: () => import(/* webpackChunkName: "computed" */ '../views/Extra/ComputedView.vue')
+                  },
+                  {
+                    path: '/watch',
+                    name: 'watch',
+                    component: () => import(/* webpackChunkName: "watch" */ '../views/Extra/WatchView.vue')
+                    },
+  
 ]
 
 const router = createRouter({
