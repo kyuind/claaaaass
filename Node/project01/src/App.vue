@@ -3,7 +3,9 @@
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link> |
     <router-link to="/input">List</router-link> |
-    <router-link to="/click">Evenvt</router-link>
+    <router-link to="/click">Evenvt</router-link> |
+    <router-link to="/page">Page</router-link> |
+    <router-link to="/parent">Parent</router-link>
   </nav>
   <router-view/>
 </template>
