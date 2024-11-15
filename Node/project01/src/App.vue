@@ -5,7 +5,9 @@
     <router-link to="/input">List</router-link> |
     <router-link to="/click">Evenvt</router-link> |
     <router-link to="/page">Page</router-link> |
-    <router-link to="/parent">Parent</router-link>
+    <router-link to="/parent">Parent</router-link> |
+    <router-link to="/table">Table</router-link> |
+    <router-link to="/grid">Ex</router-link>
   </nav>
   <router-view/>
 </template>

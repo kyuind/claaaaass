@@ -60,7 +60,7 @@ const routes = [
   {
     path: '/key',
     name: 'key',
-    component: () => import(/* webpackChunkName: "Change" */ '../views/Event/ChangeView.vue')
+    component: () => import(/* webpackChunkName: "key" */ '../views/Event/ChangeView.vue')
   },
   {
     path: '/Render',
@@ -96,6 +96,16 @@ const routes = [
     path: '/parent',
     name: 'parent',
     component: () => import(/* webpackChunkName: "parent" */ '../views/reuse/ParentView.vue')
+  },
+  {
+    path: '/table',
+    name: 'table',
+    component: () => import(/* webpackChunkName: "table" */ '../views/reuse/tableView.vue'),
+  },
+  {
+    path: '/grid',
+    name: 'grid',
+    component: () => import(/* webpackChunkName: "grid" */ '../views/reuse/GridView.vue'),
   },
 
 ]
