@@ -107,6 +107,21 @@ const routes = [
     name: 'grid',
     component: () => import(/* webpackChunkName: "grid" */ '../views/reuse/GridView.vue'),
   },
+  {
+    path: '/slot',
+    name: 'slot',
+    component: () => import(/* webpackChunkName: "slot" */ '../views/reuse/slotView.vue'),
+  },
+  {
+  path: '/root',
+  name: 'root',
+  component: () => import(/* webpackChunkName: "slot" */ '../views/reuse/RootView.vue'),
+  },
+  {
+    path: '/cust',
+    name: 'cust',
+    component: () => import(/* webpackChunkName: "slot" */ '../views/advenced/CustomDerectiveView.vue'),
+  },
 
 ]
 

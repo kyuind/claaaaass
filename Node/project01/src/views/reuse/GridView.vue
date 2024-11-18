@@ -1,14 +1,16 @@
 <template>
 <div>
-    <button @click="doSearch" class="btn btn-warning"> 조회 </button>
+    <button @click="doSearch" class="btn btn-warning"> 조회 </button> &emsp;
+    <button @click="doDelete" class="btn btn-warning"> 삭제 </button>
     <br />
     <br />
     <SimpleGrid 
     :headers = "headers"
     :items = "parentData"
     @diff-change="changeDiff"
+    @change-item="checkBoxSelected"
     />
-</div>
+</div> 
 </template>
 
 <script>
@@ -27,7 +29,9 @@ export default{
                 {title:"팔때", key: "buy"},
                 {title:"전일대비", key: "diff"},
             ],
-            allData : []
+            allData : [],
+            CheckedItems : [],
+
         }
     },
     setup(){},
@@ -56,7 +60,7 @@ export default{
                 diff : "전일 상승"
             }]
             this.allData = this.parentData
-
+            this.CheckedItems = []
         },
         changeDiff (data) {
             if (data === 'high'){
@@ -75,6 +79,15 @@ export default{
             else {
                 this.parentData = this.allData
             }
+        },
+        checkBoxSelected(data){
+            console.log(data)
+            this.CheckedItems = data
+        },
+        doDelete(){
+            this.parentData = this.parentData.filter(
+                (data) => !this.CheckedItems.includes(data.exchange)
+            );
         }
     }
 }
