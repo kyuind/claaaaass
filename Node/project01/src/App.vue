@@ -1,16 +1,19 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link> |
-    <router-link to="/input">List</router-link> |
-    <router-link to="/click">Evenvt</router-link> |
-    <router-link to="/page">Page</router-link> |
-    <router-link to="/parent">Parent</router-link> |
-    <router-link to="/table">Table</router-link> |
-    <router-link to="/grid">Ex</router-link>
-  </nav>
+<HeaderLayoutVue />
+<div class="container">
   <router-view/>
+
+</div>
+<footer-layout-vue />
 </template>
+
+<script>
+import HeaderLayoutVue from '@/components/layout/HeaderLayout.vue'
+import FooterLayoutVue from './components/layout/FooterLayout.vue'
+export default{
+  components: {HeaderLayoutVue,FooterLayoutVue}
+}
+</script>
 
 <style>
 #app {

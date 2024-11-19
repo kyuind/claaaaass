@@ -122,6 +122,16 @@ const routes = [
     name: 'cust',
     component: () => import(/* webpackChunkName: "slot" */ '../views/advenced/CustomDerectiveView.vue'),
   },
+  {
+    path: '/mixi',
+    name: 'mixi',
+    component: () => import(/* webpackChunkName: "mixi" */ '../views/advenced/MixinView.vue'),
+  },
+  {
+    path: '/plug',
+    name: 'plug',
+    component: () => import(/* webpackChunkName: "plug" */ '../views/advenced/PluginView.vue'),
+  },
 
 ]
 
