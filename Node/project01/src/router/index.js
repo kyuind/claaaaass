@@ -132,8 +132,20 @@ const routes = [
     name: 'plug',
     component: () => import(/* webpackChunkName: "plug" */ '../views/advenced/PluginView.vue'),
   },
+  {
+    path: '/vuex',
+    name: 'vuex',
+    component: () => import(/* webpackChunkName: "vuex */ '../views/VuexView.vue'),
+  },
+  {
+    path: '/auth',
+    name: 'auth',
+    component: () => import(/* webpackChunkName: "auth */ '../views/ApiConnect/LoginView.vue'),
+  },
+
 
 ]
+
 
 
 const router = createRouter({

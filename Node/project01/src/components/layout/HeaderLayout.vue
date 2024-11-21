@@ -9,6 +9,8 @@
     <router-link to="/table">Table</router-link> |
     <router-link to="/grid">Ex</router-link>
   </nav>  -->
+ 
+
  <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" @click="goToMenu('/')">MyBlog</a>
@@ -36,7 +38,7 @@
           <a class="nav-link" @click="goToMenu('page')">Page</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" @click="goToMenu('grid')">Ex</a>
+          <a class="nav-link" @click="goToMenu('vuex')">Ex</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" @click="goToMenu('mixi')">Mixin</a>
@@ -45,9 +47,13 @@
           <a class="nav-link" @click="goToMenu('plug')">Languegae</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" @click="goToMenu('auth')">Login</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link disabled" aria-disabled="true">Disabled</a>
         </li>
       </ul>
+
     </div>
   </div>
 </nav>
