@@ -4,6 +4,7 @@ const path = require('path');
 const fs = require('fs');
 
 
+
 const app = express(); // 서버 생성
 
 const PORT = process.env.PORT || 3000; //env 중요한 변수 값들 저장해놓는곳? 
