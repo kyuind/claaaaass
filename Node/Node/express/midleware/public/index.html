@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node Express</title>
+</head>
+<!-- <body>
+    <h1>Send Json</h1>
+    <button id="sendButton">Send Json</button>
+
+    <script>
+        document.getElementById("sendButton").addEventListener('click', async() =>{
+            const jsonData= {name:'kyu',
+                            age: 20,
+                            gender : "Male"
+            };
+            try{
+                const response = await fetch('/send-json',{ // req,res -> fetch에 할당
+                    method: 'POST',
+                    headers: {'content-Type': 'application/json'},
+                    body : JSON.stringify(jsonData)
+                });
+                const result = await response.json() //다시 res받은 후 실행되는 곳
+                alert(`Server Response:${result.message}`);
+            }catch(err){
+                console.log(err);
+            }   
+        })
+    </script>
+</body> -->
+
+
+
+<!-- <body>
+    <h1>Submit Form</h1>
+    <form action="/form" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id = "name" name="name"><br><br>
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age"><br><br>
+        <button type="submit">Submit</button>
+    </form>
+</body> -->
+
+<body>
+    <h1>Single File Upload</h1>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <input type="file" name="files" multiple required>
+        <button type="submit">Upload</button>
+    </form> <!-- enctype : 인코딩 방식 -->
+</body>
+</html>
