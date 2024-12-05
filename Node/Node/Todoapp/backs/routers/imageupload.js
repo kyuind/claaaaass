@@ -22,14 +22,14 @@ router.post('/upload', upload.single('image'), (req, res)=>{
 })
 
 router.get('/',(req, res)=>{
-    const dirPath=path.join(__dirname,'/uploads')
+    const dirPath=path.join(__dirname,'../uploads')
     
     fs.readdir(dirPath,(err, files)=>{
         if(err){
             return res.status(500).json({error: '디렉토리 없음'})
-
+        
         }
-        const imageUrls = files.map(file=> `/backs/uploads/${file}`)
+        const imageUrls = files.map(file=> `uploads/${file}`)
         res.json(imageUrls)
     })
 })
