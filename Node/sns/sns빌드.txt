@@ -1,0 +1,45 @@
+Router 
+>> pageRouter (Main_page)
+>> PostRouter (게시글 생성,삭제,수정)
+>> UsreRouter (유저 정보)
+>> AuthRouter  (로그인 관련 기능)
+------------------------------------------
+login 만들기
+passport(인증처리를 쉽게해주는 미들웨어,로그인과 사용자 인증을 쉽게 처리하도록 도와주는 미들웨어) 모듈사용
+strategies(전략)
+아아디,비밀번호 입력하고 아이디와 비밀번호가 맞는지 확인
+
+1.passport & passport-local 설치
+2.middleware = isNotLoggedin , isLoggedin
+3. AuthRouter 만들기 
+=> '/join', isNotLoggedin,join
+=> '/login', isNotLoggedin, login
+-> '/logout',isLoggedin, logout
+
+4.controller
+join => 회원가입 (POST)
+사용자로부터 정보를 받아서 해당 정보를 MongoDB에 저장
+
+login => 로그인 (POST)
+사용자로부터 로그인 정보를 받아서 MongoDB에 있는 데이터와 비교해서 해당 로그인을 실행
+
+logout => 로그아웃 (GET)
+요청이 들어오면 로그아웃 상태로 변환
+
+5.LocalStrategy(사용자 인증 전략)
+(1) 사용자에게 받은 값에서 DB에 있는 snsid와 같은게 있는지 찾는 작업
+(2) 회원가입에서 사용한 암호화 규칙을 적용해서 DB에 저장된 암호와 비교
+(3) 1과 2가 둘다 통과되면 user정보를 다음 미들웨어로 전달
+
+6.serialize & deserialize 만들기
+serialize => 사용자 정보를 세션에 저장
+deserialize => 사용자 정보를 복원
+--------------------------------------------------------------------------------------
+게시판 기능 
+*사진 올리기  
+*게시글 올리기
+
+
+*게시글 조회
+*게시글 삭제
+*게시글 수정 
